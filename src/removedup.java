@@ -17,5 +17,4 @@ public class removedup {
         removedup ar1 = new removedup();
         System.out.println(ar1.removedup(arr));
     }
-    
 }
