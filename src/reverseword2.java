@@ -1,12 +1,16 @@
 public class reverseword2 {
     public static void main(String[] args){
-        String sent = "Welcome to Java";
-        String[] words = sent.split(" ");
+        String name = "Welcome to Java";
+
         String rev = "";
-        for(String w : words){
-            StringBuilder sb = new StringBuilder(w).reverse();
-            rev = rev + sb.toString() + " "; 
+
+        String[] arr = name.split("\\s+");
+
+        for(String num:arr){
+            StringBuilder temp = new StringBuilder(num).reverse();
+            rev = rev + temp.toString()+ " ";
         }
-        System.out.println(rev.trim());
+        System.out.println(rev);
+        
     }
 }

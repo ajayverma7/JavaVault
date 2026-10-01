@@ -1,18 +1,18 @@
 public class reversewords {
     public static void main(String[] args){
-        String str  = "Welcome to Java";
+        String str = "Welcome to Java";
 
-        String[] words = str.split(" ");
+        String[] arr = str.split(" ");
 
         String rev = "";
 
-        for(int i=0;i<words.length;i++){
-            String temp = words[i];
-            String reverseword = "";
-            for(int j=temp.length()-1;j>=0;j--){
-                reverseword +=temp.charAt(j);
+        for(String num : arr){
+            int n = num.length();
+            String temp = "";
+            for(int i=num.length()-1;i>=0;i--){
+                temp = temp+ num.charAt(i);
             }
-            rev = rev + reverseword + " ";
+            rev = rev + temp+ " ";
         }
         System.out.println(rev);
     }
