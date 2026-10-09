@@ -1,25 +1,19 @@
-import java.util.HashMap;
+import java.util.*;
 
 public class twodarr {
-    public static void main(String[] args){
+    public static void main(String[] kappu){
+        int [][] mat = {{1,2,3},{4,5,6},{7,8,9}};
 
-        String str = "Programming";
+        int n = mat.length;
+        int m = mat[0].length;
+        int sum = 0;
 
-        HashMap<Character, Integer> map = new HashMap <>();
-
-        for(int i=0;i<str.length()-1;i++){
-            char ch = str.charAt(i);
-            if(map.containsKey(ch)){
-                map.put(ch, map.get(ch)+1);
-            }
-            else{
-                map.put(ch, 1);
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                sum = sum + mat[i][j];
             }
         }
-        System.out.println(map);
 
-        
-
-
+        System.out.println(sum);
     }
 }
